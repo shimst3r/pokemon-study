@@ -30,7 +30,7 @@ function new_ash(x, y)
         elseif self.dir == "right" then
             return fget(mget(self.x + 2, self.y + 1.5), 0)
         elseif self.dir == "down" then
-            return fget(mget(self.x, self.y + 2), 0)
+            return fget(mget(self.x + 1, self.y + 2), 0) or fget(mget(self.x - 1, self.y + 2), 0)
         end
         return false
     end
